@@ -65,7 +65,6 @@ module fpu_tb2();
         #10;
         $display("F  | %4h     | %4h     | %4h    | %1b", a, b, alu_out, overflow);
         
-        $display("===============================");
         $finish;
     end
     
