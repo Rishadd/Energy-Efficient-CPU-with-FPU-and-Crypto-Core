@@ -2,6 +2,7 @@
 
 The objective of this project is to design and implement a custom Instruction Set Architecture (ISA) and its corresponding processor using Verilog HDL. The ISA must be defined such that all instructions are 16 bits wide, and the processor includes 8 General Purpose Registers (GPRs).
 Find the specifications of the instructions of the ISA linked [here](https://docs.google.com/spreadsheets/d/18On-sn_LSf54qCVk8wgvnJ0nMea1kv3EHVJAyhfKcl8/edit?gid=1331383528#gid=1331383528)
+Find a list of compiled instructions here to help test your processor: 
 
 ---
 
@@ -60,7 +61,7 @@ Extend the base ISA to support a wider range of operations for more complex prog
 
 ### 3. Floating-Point Unit (FPU) Integration
 
-Add a Floating Point Arithmetic Processing capability to the ALU. All FPU operations must comply with the ***IEEE 754 half precision standard***.
+Desimng a Floating Point Arithmetic Processing Unit. All FPU operations must comply with the ***IEEE 754 half precision standard***.
 The instructions to be supported ar as follows:
 
 * **FPU Operations:**
@@ -69,11 +70,7 @@ The instructions to be supported ar as follows:
 
 ### 4. Pipelined Core & Power Management
 
-Pipeline the processor and implement a hazard detection-resolution unit. Further, implement the below mentioned power management instrctions:
-
-* **Power Management Instructions:**
-    * `WFI` (Wait For Interrupt): Places the processor into a low-power "sleep" state, gating clocks to non-essential units.
-    * `WU` (Wake Up): An instruction (or external signal) to resume the processor from its sleep state.
+Pipeline the processor and implement a hazard detection-resolution unit. Integrate the FPU core into the pipelined processor.
 
 ### 5. Cryptographic Co-Processor Integration
 
